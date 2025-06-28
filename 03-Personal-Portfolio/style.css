@@ -1,364 +1,234 @@
+/* Import Comic Neue and Montserrat fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+/* Normalize universal selector */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-    background: #f9f9f9;
-    color: #222;
-    margin: 0;
-    padding: 0;
-}
-h1 {
-    color: black;
-    text-align: center;
-    font-size: 3em;;
-    margin-top: 40px;
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  color: #222;
 }
 
-.background {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #4fc3f7;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
+p, li, a, span, .testimonial-footer {
+  font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Normalize ul, ol, li */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+    background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+    border-bottom: 1px solid #1976d2;
+}
+
+
+.container-logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, #228822 0%, #aaffaa 100%);
-    color: #fff;
-    padding: 40px 0 90px 0;
-    
+    padding: 10px 20px;
+    gap: 30px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 14px; /* Espacio horizontal entre el logo y el nombre */
+img{
+    width: 60px;
+    height: 60px;
 }
 
 .name{
-    text-align: center;
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: 0 2px 8px #228822, 0 1px 0 #176617;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    align-items: center;
+}
+
+/* Set nav styles */
+.container-navbar {
     display: flex;
     align-items: center;
-    height: 40px; /* Igual que el logo para centrar verticalmente */
-}
-
-.container-navbar{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(90deg, #228822 0%, #aaffaa 100%);
-    padding-top: 25px; /* Espacio superior extra */
-    padding-left: 32px; /* Espacio izquierdo extra */
+    padding: 10px 20px;
 }
 
-.nav-links a{
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 0 1px 4px #176617;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: #aaffaa;
-}
-
-.nav-links {
+.nav-links{
     display: flex;
-    text-decoration: none;
-    justify-content: space-around;
-    list-style: none;
-    width: 25%;
+    gap: 60px;
+    padding-right: 30px;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 1.5em;
+    color: #343a40;
 }
 
+.nav-links li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links li:hover {
+    color: #1976d2;
+    background: linear-gradient(90deg, #e3f2fd 0%, #b3e5fc 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(79,195,247,0.15);
+    transform: scale(1.08);
+    transition: all 0.2s cubic-bezier(.4,2,.6,1);
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    text-align: center;
+}
+
+
+.hero h1 {
+    font-size: 5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Set main styles */
 .main-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 300px;
-    border-top: 1px solid #000;
+    font-size: 1.5rem;
+    height: 500px
+}
+
+.col1, .col2, .col3 {
+    background-color: #f8f9fa;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
 }
 
 .col1{
+    border-bottom: 1px solid black;
+}
+
+.project-list-flex{
     display: flex;
+    margin-top: 40px;
     flex-direction: column;
-    height: 100%;
+    gap: 40px;
 }
 
-.projects{
-    display: flex;
-    flex-direction: column;
-    flex:1;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
-
-.projects ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    height: 100%;
-}
-
-.projects ul li:first-child {
-    border-top: 1px solid #000;
-}
-
-.projects li{
-    flex: 1;
-    margin:0;
-    border-bottom: 1px solid #000;
+.projects h2{
     padding-left: 30px;
-    padding-top: 15px;
 }
 
-.projects ul li:last-child {
+
+.item-list-flex {
+    color: #343a40;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.projects li:last-child{
     border-bottom: none;
 }
 
-.col2, .col3 {
+.col2{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.work{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
-
-h2{
-    text-align: left;
-    padding-bottom: 15px;
+.work-experience{
+    border-bottom: 1px solid black;
     padding-left: 30px;
-    padding-top: 10px;
-    color: #228822;
+    padding-bottom: 60px;
 }
 
-
-.col2 > div, .col3 > div {
-    flex: 1;
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
-    padding: 16px;
-}
-
-
-p, .main-grid a{
+.work-opensource{
     padding-left: 30px;
-    color: #222;
+}
+
+
+.education{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    border-bottom: 1px solid black;
+    padding-left: 30px;
 }
 
 .title-reviews{
     text-align: left;
     padding: 20px 0 20px 30px;
     font-size: 1.5em;
-    color: #228822;
+    color: #4fc3f7;
 }
 
-.container-testimonials{
+.container-testimonials {
     display: flex;
     flex-direction: row;
     padding: 10px 0 10px 0;
     width: auto;
     margin: 0 20px 0 10px;
-
 }
 
-.item-testimonial{
-    font-weight: 500;
-    margin: 0 250px;
-    padding : 20px 20px 0 10px;
+.item-testimonial {
+    font-weight: 700;
+    margin: 0 150px;
+    padding : 30px 30px 20px 30px;
     line-height: 1.5em;
-    font-size: 1.1em;;
-    border: 2px solid #44aa44;
+    font-size: 1.1em;
+    border: 2px solid #4fc3f7;
     border-radius: 40px;
-    box-shadow: 0 2px 12px rgba(68,170,68,0.10);
-    background: #f6fff6;
+    box-shadow: 0 2px 12px rgba(79,195,247,0.10);
+    background: #f6fcff;
     transition: box-shadow 0.2s, border-color 0.2s;
+    text-align: justify;
 }
 
-.item-testimonial:hover {
-    border-color: #228822;
-    box-shadow: 0 4px 24px rgba(68,170,68,0.18);
-}
-
-.testimonial-footer{
+.testimonial-footer {
     text-align: center;
-    padding-top: 20px;
-    color: rgba(68, 68, 68, 0.7);
-    font-weight: bold;
-    opacity: 0.85;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
 }
 
 footer .copyright {
     text-align: center;
-    color: #228822;
+    color: #4fc3f7;
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 36px 0 28px 0;
     opacity: 0.85;
     font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
-}
-
-/* ====== MENÚ HAMBURGUESA RESPONSIVE ====== */
-.menu-toggle {
-    display: none;
-}
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    width: 36px;
-    height: 36px;
-    margin-left: auto;
-    margin-right: 16px;
-}
-.menu-icon span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #fff;
-    border-radius: 2px;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .menu-icon {
-        display: flex;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #228822;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        z-index: 100;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-    .menu-toggle:checked + .menu-icon + .nav-links {
-        display: flex;
-    }
-    .container-navbar {
-        position: relative;
-    }
-}
-
-/* ===================== RESPONSIVE DESIGN ===================== */
-@media (max-width: 1024px) {
-    .main-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .col3 {
-        display: none;
-    }
-    .container-navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 16px;
-    }
-    .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-        font-size: 1.2em;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-grid {
-        grid-template-columns: 1fr;
-    }
-    .col2, .col1 {
-        border-right: none;
-    }
-    .container-navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 8px;
-        padding-top: 12px;
-    }
-    .logo {
-        margin-bottom: 10px;
-    }
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        font-size: 1em;
-        gap: 6px;
-    }
-    .background {
-        padding: 24px 0 40px 0;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.2em;
-        padding-left: 12px;
-    }
-    p, .main-grid a {
-        padding-left: 12px;
-        font-size: 1em;
-    }
-    .container-testimonials {
-        flex-direction: column;
-        align-items: stretch;
-        margin: 0 4px;
-    }
-    .item-testimonial {
-        margin: 16px 0;
-        padding: 18px 8px 0 8px;
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-navbar {
-        padding-left: 2px;
-        padding-top: 6px;
-    }
-    .logo img {
-        width: 32px;
-        height: 32px;
-    }
-    .name {
-        font-size: 1em;
-        height: 32px;
-    }
-    .background {
-        padding: 12px 0 20px 0;
-    }
-    h1 {
-        font-size: 1.2em;
-    }
-    h2 {
-        font-size: 1em;
-        padding-left: 6px;
-    }
-    p, .main-grid a {
-        padding-left: 6px;
-        font-size: 0.95em;
-    }
-    .item-testimonial {
-        font-size: 0.95em;
-        border-radius: 18px;
-    }
-    footer .copyright {
-        font-size: 0.95em;
-        padding: 18px 0 12px 0;
-    }
-}
-
-/* Imágenes y contenedores fluidos */
-img, .main-grid, .container-navbar, .background {
-    max-width: 100%;
-    box-sizing: border-box;
 }
