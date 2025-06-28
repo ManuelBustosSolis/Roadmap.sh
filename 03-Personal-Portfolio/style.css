@@ -50,8 +50,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    gap: 30px;
+    padding: 1rem 2vw;
+    gap: 2vw;
 }
 
 img{
@@ -60,7 +60,7 @@ img{
 }
 
 .name{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #343a40;
     align-items: center;
@@ -76,9 +76,9 @@ img{
 
 .nav-links{
     display: flex;
-    gap: 60px;
-    padding-right: 30px;
-    font-size: 2rem;
+    gap: 3vw;
+    padding-right: 2vh;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #343a40;
 }
@@ -108,7 +108,7 @@ img{
 
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: #343a40;
     margin-bottom: 20px;
 }
@@ -118,7 +118,8 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1.5rem;
-    height: 500px
+    min-height: 60vh;
+    height: auto;
 }
 
 .col1, .col2, .col3 {
@@ -139,15 +140,15 @@ img{
 }
 
 .projects h2{
-    padding-left: 30px;
+    padding-left: 2rem;
 }
 
 
 .item-list-flex {
     color: #343a40;
     border-bottom: 1px solid black;
-    padding-bottom: 10px;
-    padding-left: 30px;
+    padding-bottom: 0.7rem;
+    padding-left: 2rem;
 }
 
 .projects li:last-child{
@@ -203,12 +204,12 @@ img{
 
 .item-testimonial {
     font-weight: 700;
-    margin: 0 150px;
-    padding : 30px 30px 20px 30px;
+    margin: 0 5vw;
+    padding: 2rem 2rem 1.2rem 2rem;
     line-height: 1.5em;
     font-size: 1.1em;
     border: 2px solid #4fc3f7;
-    border-radius: 40px;
+    border-radius: 2.5em;
     box-shadow: 0 2px 12px rgba(79,195,247,0.10);
     background: #f6fcff;
     transition: box-shadow 0.2s, border-color 0.2s;
@@ -232,3 +233,4 @@ footer .copyright {
     opacity: 0.85;
     font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
 }
+
