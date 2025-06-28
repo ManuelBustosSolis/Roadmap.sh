@@ -234,3 +234,92 @@ footer .copyright {
     font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Responsive styles */
+@media (max-width: 480px) {
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0; 
+    }
+  .main-grid {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+    min-height: 40vh;
+    padding: 0.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 0;
+    font-size: 1.1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .container-logo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+    .item-testimonial {
+    flex-direction: row;
+    gap: 1rem;
+    padding-right: 0;
+    font-size: 0.8rem;
+    }
+}
+
+
+/* Media query fot 481px  to 468px */
+@media (min-width: 481px) and (max-width: 768px)
+{
+    body{
+        width: 100%;
+    }
+    .main-grid {
+    grid-template-columns: 1fr;
+    font-size: 1.1rem;
+    min-height: 45vh;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 2vw;
+    font-size: 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .item-testimonial {
+    flex-direction: row;
+    gap: 1rem;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-size: 0.8rem;
+    }
+}
+
+
+/* Media query for 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px{
+    .main-grid {
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.2rem;
+    min-height: 50vh;
+  }
+  .col3 {
+    grid-column: 1 / -1;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.5rem;
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
