@@ -1,0 +1,120 @@
+/* style.css para Changelog Component */
+body {
+    font-family: 'Comic Neue', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 2rem;
+}
+
+.changelog h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #3b82f6;
+    text-align: center;
+}
+
+.changelog h2 {
+    text-align: ce;
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.changelog-timeline {
+    position: relative;
+    margin-left: 0.5rem;
+}
+
+.changelog-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.changelog-date {
+    text-align: right;
+    padding-right: 2.5rem;
+    color: #64748b;
+    font-size: 1rem;
+    position: relative;
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.changelog-desc {
+    background: #f1f5f9;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    position: relative;
+}
+
+/* Línea vertical */
+.changelog-timeline::before {
+    content: "";
+    position: absolute;
+    left: 160px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #3b82f6;
+    z-index: 0;
+}
+
+/* Punto negro en cada fila */
+.changelog-row::before {
+    content: "";
+    position: absolute;
+    left: 160px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background: #222;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: 2;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    .changelog-row {
+        grid-template-columns: 120px 1fr;
+        min-height: 48px;
+    }
+    .changelog-timeline::before,
+    .changelog-row::before {
+        left: 120px;
+    }
+    .changelog-date {
+        padding-right: 1.2rem;
+        font-size: 0.95rem;
+    }
+    .changelog-desc {
+        padding: 0.7rem 1rem;
+        font-size: 0.98rem;
+    }
+    .changelog h1 {
+        font-size: 1.3rem;
+    }
+    .changelog h2 {
+        font-size: 1rem;
+    }
+}
