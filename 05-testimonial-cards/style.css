@@ -39,21 +39,23 @@ button, input, textarea, select {
 }
 
 /* Fin de normalización inicial. Puedes empezar tu diseño a partir de aquí. */
+
+/*Inicia diseño del primer testimonio.*/
 .testimonial-card-1 {
-    background-color: #999;
     width: 500px;
     height: 180px;
     display: grid;
     grid-template-columns: 30% 70%;
-    gap: .5vh;
+    gap: .5rem;
     margin: 50px auto;
     padding: 15px;
 }
 
 
 .photographie-card-1 {
-    
-    border-radius: 25%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
 }
 
 .content-1 {
@@ -61,7 +63,8 @@ button, input, textarea, select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #23272f; /* Gris oscuro casi negro */
+    color: #fff;
     padding-left: 1.2rem;
     border-radius: 25px;
 }
@@ -69,7 +72,12 @@ button, input, textarea, select {
 .author-1 {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #333;
+    color: #fff;
+}
+
+.jobTitle-1 {
+    font-style: italic;
+    color: #666;
 }
 
 .message-1 {
@@ -78,4 +86,7 @@ button, input, textarea, select {
     text-align: center;
     word-break: break-word;
     overflow-wrap: break-word;
+    color: #f3f3f3;
 }
+
+/*Termina el diseño del primer testimonio.*/
