@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datepicker UI</title>
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="datepicker-ui">
+            <div class="datepicker-top">
+                <input type="text" class="datepicker-input" placeholder="dd/mm/yyyy" readonly>
+                <button class="datepicker-btn" aria-label="Abrir calendario">
+                    <!-- Icono de calendario SVG -->
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="4"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="datepicker-calendar">
+                <div class="datepicker-header">
+                    <button class="datepicker-arrow" aria-label="Mes anterior">&#9664;</button>
+                    <span class="datepicker-month">December 2022</span>
+                    <button class="datepicker-arrow" aria-label="Mes siguiente">&#9654;</button>
+                </div>
+                <div class="datepicker-days">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+                <div class="datepicker-grid">
+                    <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+                    <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                    <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+                    <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                    <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="datepicker-container">
+            <div class="datepicker-input-top">
+                <input type="text" class="datepicker-input-top" placeholder="DD / MM / YYYY">
+                <button class="datepicker-btn-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="4"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendar">
+                <div class="datepicker-calendar-top">
+
+                </div>
+                <div class="datepicker-calendar-days">
+                    <span>L</span><span>M</span><span>Mi</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                </div>
+                <div class="datepicker-calendar-numbers">
+                    <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

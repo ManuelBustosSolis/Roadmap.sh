@@ -1,0 +1,150 @@
+/* --- Estilos para el Datepicker UI visual --- */
+.datepicker-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.datepicker-input {
+    padding: 0.7rem 1.2rem;
+    border: 1.5px solid #2563eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    width: 160px;
+    background: #fff;
+    color: #222;
+}
+
+.datepicker-btn {
+    background: #fff;
+    border: 1.5px solid #2563eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s, border-color 0.2s;
+}
+.datepicker-btn:hover {
+    background: #f0f6ff;
+    border-color: #3b82f6;
+}
+
+.datepicker-calendar {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+.datepicker-arrow {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #2563eb;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    transition: background 0.2s;
+}
+.datepicker-arrow:hover {
+    background: #f0f6ff;
+}
+.datepicker-month {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.datepicker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.datepicker-grid {
+    position: relative;
+    width: 308px; /* 7 columnas x 42px + 6*2px gap */
+    height: 170px; /* 5 filas x 32px + 4*2px gap */
+    margin: 0 auto;
+    background: transparent;
+}
+.datepicker-grid span {
+    position: absolute;
+    width: 42px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #222;
+    background: #f8fafc;
+    border-radius: 0.4rem;
+    transition: background 0.2s, color 0.2s;
+}
+.datepicker-grid span:not(:empty):hover {
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Posicionamiento absoluto de cada celda (1-based) */
+/* Fila 1 */
+.datepicker-grid span:nth-child(1) { left: 0px; top: 0px; }
+.datepicker-grid span:nth-child(2) { left: 44px; top: 0px; }
+.datepicker-grid span:nth-child(3) { left: 88px; top: 0px; }
+.datepicker-grid span:nth-child(4) { left: 132px; top: 0px; }
+.datepicker-grid span:nth-child(5) { left: 176px; top: 0px; }
+.datepicker-grid span:nth-child(6) { left: 220px; top: 0px; }
+.datepicker-grid span:nth-child(7) { left: 264px; top: 0px; }
+/* Fila 2 */
+.datepicker-grid span:nth-child(8) { left: 0px; top: 34px; }
+.datepicker-grid span:nth-child(9) { left: 44px; top: 34px; }
+.datepicker-grid span:nth-child(10) { left: 88px; top: 34px; }
+.datepicker-grid span:nth-child(11) { left: 132px; top: 34px; }
+.datepicker-grid span:nth-child(12) { left: 176px; top: 34px; }
+.datepicker-grid span:nth-child(13) { left: 220px; top: 34px; }
+.datepicker-grid span:nth-child(14) { left: 264px; top: 34px; }
+/* Fila 3 */
+.datepicker-grid span:nth-child(15) { left: 0px; top: 68px; }
+.datepicker-grid span:nth-child(16) { left: 44px; top: 68px; }
+.datepicker-grid span:nth-child(17) { left: 88px; top: 68px; }
+.datepicker-grid span:nth-child(18) { left: 132px; top: 68px; }
+.datepicker-grid span:nth-child(19) { left: 176px; top: 68px; }
+.datepicker-grid span:nth-child(20) { left: 220px; top: 68px; }
+.datepicker-grid span:nth-child(21) { left: 264px; top: 68px; }
+/* Fila 4 */
+.datepicker-grid span:nth-child(22) { left: 0px; top: 102px; }
+.datepicker-grid span:nth-child(23) { left: 44px; top: 102px; }
+.datepicker-grid span:nth-child(24) { left: 88px; top: 102px; }
+.datepicker-grid span:nth-child(25) { left: 132px; top: 102px; }
+.datepicker-grid span:nth-child(26) { left: 176px; top: 102px; }
+.datepicker-grid span:nth-child(27) { left: 220px; top: 102px; }
+.datepicker-grid span:nth-child(28) { left: 264px; top: 102px; }
+/* Fila 5 */
+.datepicker-grid span:nth-child(29) { left: 0px; top: 136px; }
+.datepicker-grid span:nth-child(30) { left: 44px; top: 136px; }
+.datepicker-grid span:nth-child(31) { left: 88px; top: 136px; }
+.datepicker-grid span:nth-child(32) { left: 132px; top: 136px; }
+.datepicker-grid span:nth-child(33) { left: 176px; top: 136px; }
+.datepicker-grid span:nth-child(34) { left: 220px; top: 136px; }
+.datepicker-grid span:nth-child(35) { left: 264px; top: 136px; }
+.datepicker-ui {
+  background-color: gray;
+}
