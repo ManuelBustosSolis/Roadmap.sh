@@ -1,0 +1,73 @@
+/* Normalización inicial CSS */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.accessible-form-ui {
+    width: 20%;
+    margin: 100px auto;
+}
+
+.form-ui{
+    padding: 20px;
+}
+
+.legend{
+    font-size: 2rem;
+    font-weight: bold;
+    margin:auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+label{
+    display: block;
+    margin: 10px 0; 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.input-password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Espacio para el icono */
+}
+
+.icon-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
