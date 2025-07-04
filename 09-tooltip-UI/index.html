@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <!--  Se utiliza el section como contenedor del navbar  -->
+        <section class="tooltip-container">
+            <ul class="tooltip-ul">  <!-- Se utiliza la utiliza ul para crear una lista con los elementos del menú y se agrega una clase para estilizar  -->
+                <li class="tooltip-li"> <!--El span será utilizado para mostrar el texto del tooltip al momento de hacer hover en el elemento se dejara con visibility:hidden como parámetro inicial-->
+                    <a href="#" class="tooltip">Home <span class="tooltip-text">Vé al HOME con este</span></a>
+                </li>
+                <li class="tooltip-li">
+                    <a href="#" class="tooltip">Projects <span class="tooltip-text">Vé a Projects</span></a>
+                </li>
+                <li class="tooltip-li">
+                    <a href="#" class="tooltip">Blog <span class="tooltip-text">Vé al Blog</span></a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+    
+</body>
+</html>

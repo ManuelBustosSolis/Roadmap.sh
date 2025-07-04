@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Se da un ancho y alto al contenedor del navbar así como un color de fondo y tamaño de fuente */
+.tooltip-container{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(111, 111, 202);
+    font-size: 1.5rem;
+}
+
+/* Se agrega el ancho a la lista y se pone display flex para acomodar de manera horizontal.
+    Se quitan las viñetas, los margenes y justifica el contenido con espacio entre cada elemento. */
+.tooltip-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*Se le quita la decoración inicial a los enlaces utilizados dentro de los li, sin embargo aún falta poner los pseudoelementos para a:visited etc.*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*  Se agrega la clase tooltip al <a> el cual funcionará como contenedor de la caja del tooltip emergente
+    Se utilizará la posición relativa para posteriormento usar absolute en el span*/
+.tooltip{
+    position: relative;
+    background: white;
+    color: #222;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    outline:none;
+}
+
+
+.tooltip-text{
+    visibility: hidden;/*  El texto del tooltip en este caso el span recibe una visibilidad inicial de hidden para que se mantenga oculto*/
+    opacity: 0;
+    width: max-content;
+    max-width: 250px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+
+    padding: 0.7em 1em;
+    position: absolute; /*Se utiliza la posicion absolute para poder moverlo en relación al contenedor, en este caso el .tooltip <a>*/
+    left: 50%;
+    top: 120%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: opacity 0.2s;
+    font-size: 1rem;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+
+.tooltip:focus .tooltip-text,
+.tooltip:hover .tooltip-text {
+    visibility: visible; /*Al hacer un hover en el elemento <a> se muestra el tooltip en la parte inferior.*/
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*diseño de la viñeta en forma de triangulo que muestra de donde sale el tooltip*/
+.tooltip-text::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color:  transparent  transparent #222 transparent ;
+}
